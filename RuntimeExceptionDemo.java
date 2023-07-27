@@ -1,5 +1,6 @@
-// 自定义异常
-class AgeTooBigException extends Exception{
+// 自定义运行时异常
+// 无需显式抛出声明
+class AgeTooBigException extends RuntimeException{
 	private String info;
 
 	public AgeTooBigException(){
@@ -39,7 +40,7 @@ class Person{
 	private int age;
 	
 	// 定义函数，声明异常
-	public void setAge(int age) throws AgeTooBigException,AgeTooSmallException{
+	public void setAge(int age) throws AgeTooSmallException{
 		if(age>100){
 			// 抛出年龄过大异常
 			throw new AgeTooBigException("年龄太大");
@@ -54,24 +55,11 @@ class Person{
 	public int getAge(){
 		return age;
 	}
-		
-	public Person(){
-	}
-	// 构造函数
-	public Person(int age) throws AgeTooBigException,AgeTooSmallException{
-		if(age>100){
-			// 抛出年龄过大异常
-			throw new AgeTooBigException("年龄太大");
-		}
-		else if(age<0){
-			// 抛出年龄过小异常
-			throw new AgeTooSmallException("年龄太小");
-		}
-		this.age = age;
-	}
 }
 
-class ExceptionDemo2{
+
+
+class RuntimeExceptionDemo{
 	public static void main(String[] args){
 		Person p = new Person();
 
@@ -89,27 +77,31 @@ class ExceptionDemo2{
 		finally{
 			System.out.println("无论如何都要处理的");
 		}
-//		catch(Exception ex){
-//			ex.printStackTrace();
-//		}
 
-		/*
-		catch(Exception ex){
-			ex.printStackTrace();
-		}
-		// 不可达代码
-		catch(AgeTooBigException ex){
-			ex.printStackTrace();
-		}
-		*/
 		System.out.println(p.getAge());
 	}
 }
 
-// 另类处理方法
-class ExceptionDemo3{
-	public static void main(String[] args) throws Exception  {
-		Person p = new Person();
-		p.setAge(200);
+// 年龄非法异常
+class AgeInvalidException extends AgeTooSmallException{
+}
+
+// 中国人
+class Chinese extends Person{
+	// 覆盖方法时不能追加异常，除非新增异常为子异常
+	public void setAge(int age) throws AgeInvalidException{
+		if(age<0 || age>100){
+			throw new AgeInvalidException();
+		}
+		/*
+		try{
+			super.setAge(age);
+		}
+		catch(Exception e){
+		}
+		finally{
+			System.out.println("over!");
+		}
+		*/
 	}
 }
