@@ -50,7 +50,8 @@ class  ThreadDemo4{
 		Box b3 = new Box("003",5);
 		
 		Waiter w = new Waiter("翠花",1000);
-		w.setDaemon(true); // 设置守护线程
+		w.setDaemon(true); // 设置守护线程，线程启动前设置
+		// isDaemon() 指明线程是否为守护线程
 		// 启动线程
 		b1.start();
 		b2.start();
