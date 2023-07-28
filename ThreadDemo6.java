@@ -14,9 +14,13 @@ class Saler extends Thread{
 	}
 
 	public void run(){
-		while(tickets>0){
+		//while(tickets>0){
+		  while(true){
 			// 将一段代码原子化，解决并发访问问题
 			synchronized(lock){
+				if (tickets<=0){
+					return;
+				}
 				int temp = tickets;
 				try{
 					Thread.sleep(10);	
@@ -47,7 +51,9 @@ class ThreadDemo6{
 	public static void main(String[] args){
 		Saler s1 = new Saler("Marry");
 		Saler s2 = new Saler("John");
+		Saler s3 = new Saler("Anna");
 		s1.start();
 		s2.start();
+		s3.start();
 	}
 }
