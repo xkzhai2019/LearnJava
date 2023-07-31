@@ -58,7 +58,7 @@ class Consumer extends Thread{
 				int size = list.size();
 				// 集合为空
 				if(size==0){
-					// 进入到等待队列
+					// 进入到锁旗标的等待队列，释放CPU抢占权，释放锁旗标监控权
 					try{
 						list.wait(10);
 					}

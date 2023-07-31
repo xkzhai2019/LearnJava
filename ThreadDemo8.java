@@ -53,6 +53,7 @@ class Consumer extends Thread{
 			int tmp = pool.cut();
 			System.out.println("Consumer:"+tmp);
 			try{
+				// 释放cpu抢占权，不释放锁旗标
 				Thread.sleep(100);
 			}
 			catch(Exception e){
