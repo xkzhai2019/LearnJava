@@ -12,13 +12,17 @@ class Pool{
 		// 锁旗标的监控权
 		synchronized(this){
 			try{
+				String name = Thread.currentThread().getName();
 				while(list.size() >= MAX){
 					// 放弃锁旗标监控权
+					System.out.println(name+".wait()");
 					this.wait();
 					//System.out.println("xxxxx");
 				}
 				list.add(n);
-				System.out.println("size:"+list.size());
+				//System.out.println("size:"+list.size());
+				System.out.println(name+" +:"+n);
+				System.out.println(name+".notify()");
 				this.notify();
 			}
 			catch(Exception e){
@@ -30,10 +34,14 @@ class Pool{
 	public int remove(){
 		synchronized(this){
 			try{
+				String name = Thread.currentThread().getName();
 				while(list.size() == 0){
+					System.out.println(name+".wait()");
 					this.wait();
 				}
 				int i =list.remove(0);
+				System.out.println(name+" -:"+i);
+				System.out.println(name+".notify()");
 				this.notify();
 				return i;
 			}
@@ -59,13 +67,15 @@ class Productor extends Thread{
 		//int i = 0;
 		while(true){
 			pool.add(i++);
+			/*
 			try{
 				//Thread.sleep(100);
 			}
 			catch(Exception e){
 				
 			}
-			System.out.println(name+"生产了："+i);
+			*/
+			//System.out.println(name+"生产了："+i);
 		}
 	}
 }
@@ -80,14 +90,16 @@ class Consumer extends Thread{
 	}
 	public void run(){
 		while(true){
-			int i = pool.remove();
+			pool.remove();
+			/*
 			try{
 				//Thread.sleep(100);
 			}
 			catch(Exception e){
 				
 			}
-			System.out.println(name+"消费了："+i);
+			*/
+			//System.out.println(name+"消费了："+i);
 		}
 	}
 }
@@ -95,9 +107,12 @@ class ThreadDemo12{
 	public static void main(String[] args){
 		Pool pool = new Pool();
 		Productor p1 = new Productor("生产者1",pool);
+		p1.setName("p1");
 		//Productor p2 = new Productor("生产者2",pool);
 		Consumer c1 = new Consumer("消费者1",pool);
+		c1.setName("c1");
 		Consumer c2 = new Consumer("消费者2",pool);
+		c2.setName("c2");
 
 		p1.start();
 		//p2.start();
