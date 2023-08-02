@@ -1,0 +1,11 @@
+package com.xkzhai.collection;
+
+import java.awt.List;
+
+public class ListDemo {
+	public static void main(String[] args) {
+		// 定义集合List
+		List<String> list = new ArrayList<String>();
+		
+	}
+}
