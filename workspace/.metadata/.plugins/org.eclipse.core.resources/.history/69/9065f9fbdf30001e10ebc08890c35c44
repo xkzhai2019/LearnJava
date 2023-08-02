@@ -1,0 +1,10 @@
+package com.xkzhai.string;
+
+public class App2 {
+	public static void main(String[] args) throws Exception{
+		String str = "abc÷–π˙»Àefg";
+		
+		byte[] bytes = str.getBytes("GBK");
+	
+	}
+}

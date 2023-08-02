@@ -1,0 +1,25 @@
+package com.xkzhai.string;
+
+public class WrapperDemo {
+	// ctrl + shift + f 格式化代码
+	// alt + / 内容辅助
+	public static void main(String[] args) {
+		Byte b = new Byte((byte)12);
+		System.out.println(Byte.MAX_VALUE);
+		System.out.println(Byte.MIN_VALUE);
+		
+		Integer.toHexString(100);
+		
+		Short s = new Short((short)127);
+		Integer i = new Integer(127);
+		Long l = new Long(127);
+		
+		Boolean bb = new Boolean(true);
+		bb.booleanValue();
+		
+		Float f = new Float(12.5f);
+		Double d = new Double("12.5");
+		Character c = new Character('A');
+		
+	}
+}

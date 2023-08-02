@@ -1,0 +1,11 @@
+package com.xkzhai.string;
+
+public class App3 {
+	public static void main(String[] args) throws Exception{
+		
+		// utf-8：中，使用3个字节存储
+		String str = "a中b";
+		byte[] bytes = str.getBytes("utf-8");
+		System.out.println(bytes);
+	}
+}

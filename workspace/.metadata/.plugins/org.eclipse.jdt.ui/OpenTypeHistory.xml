@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+<typeInfo handle="=ThreadDemo/C:\/MyPrograms\/Java\/jdk1.8.0_251\/jre\/lib\/rt.jar&lt;java.lang(Integer.class[Integer" modifiers="49" timestamp="1690164140601"/>
+<typeInfo handle="=StringDemo/C:\/MyPrograms\/Java\/jdk1.8.0_251\/jre\/lib\/rt.jar&lt;java.lang(StringBuffer.class[StringBuffer" modifiers="49" timestamp="1690164140601"/>
+</typeInfoHistroy>

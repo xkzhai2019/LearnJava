@@ -1,0 +1,9 @@
+package com.xkzhai.string;
+
+public class StringBuildDemo {
+
+	public static void main(String[] args) {
+		Person p = new Person();
+	}
+
+}

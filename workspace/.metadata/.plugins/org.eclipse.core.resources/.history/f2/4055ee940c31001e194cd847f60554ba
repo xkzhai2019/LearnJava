@@ -1,0 +1,11 @@
+package com.xkzhai.string;
+
+public class Person {
+	private String name;
+	private int age;
+	private boolean sex;
+	
+	public String getName(){
+		return name;
+	}
+}

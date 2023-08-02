@@ -1,0 +1,18 @@
+package com.xkzhai.string;
+
+public class App3 {
+	public static void main(String[] args) throws Exception{
+		
+		// utf-8：中--> -28 -72 -83 使用3个字节存储
+		String str = "a中b";
+		byte[] bytes = str.getBytes("utf-8");
+		System.out.println(bytes);
+		
+		// gbk: 中--> -42 -48使用2个字节存储
+		bytes = str.getBytes("GBK");
+		System.out.println(bytes);
+		
+		bytes = str.getBytes("ISO8859-1");
+		System.out.println(bytes);
+	}
+}
