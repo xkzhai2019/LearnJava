@@ -1,0 +1,25 @@
+package com.xkzhai.collection;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class LinkedListDemo2 {
+
+	public static void main(String[] args) {
+		List<byte[]> list = new LinkedList<byte[]>()
+		//List<Integer> list = new LinkedList<Integer>();
+		int i = 0;
+		while(true){
+			list.add(i++);
+			System.out.println(i);
+//			try {
+//				Thread.sleep(1);
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+		}
+
+	}
+
+}

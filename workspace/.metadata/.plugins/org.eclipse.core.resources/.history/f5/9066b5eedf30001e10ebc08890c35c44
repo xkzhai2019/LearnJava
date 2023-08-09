@@ -1,8 +1,0 @@
-package com.xkzhai.string;
-
-public class App2 {
-	public static void main(String[] args){
-		String str = "abcÖĞ¹úÈËefg";
-	
-	}
-}

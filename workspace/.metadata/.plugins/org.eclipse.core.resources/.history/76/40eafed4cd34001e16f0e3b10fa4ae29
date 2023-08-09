@@ -1,0 +1,18 @@
+package com.xkzhai.collection;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LinkedListDemo2 {
+
+	public static void main(String[] args) {
+		List<Integer> list = new ArrayList<Integer>();
+		int i = 0;
+		while(true){
+			list.add(i++);
+			System.out.println(i);
+		}
+
+	}
+
+}
