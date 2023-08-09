@@ -26,9 +26,9 @@
 		</section>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
-		<item value="592" key="DIALOG_WIDTH"/>
-		<item value="1|Tahoma|8.4|0|WINDOWS|1|-14|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
-		<item value="752" key="DIALOG_HEIGHT"/>
+		<item value="857" key="DIALOG_WIDTH"/>
+		<item value="1|Tahoma|8.622754|0|WINDOWS|1|-20|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+		<item value="1018" key="DIALOG_HEIGHT"/>
 		<item value="1498" key="DIALOG_X_ORIGIN"/>
 		<item value="372" key="DIALOG_Y_ORIGIN"/>
 	</section>
@@ -40,9 +40,9 @@
 		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
 	</section>
 	<section name="DialogBounds_GenerateHashCodeEqualsDialog">
-		<item value="511" key="DIALOG_WIDTH"/>
-		<item value="1|Tahoma|8.4|0|WINDOWS|1|-14|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
-		<item value="635" key="DIALOG_HEIGHT"/>
+		<item value="758" key="DIALOG_WIDTH"/>
+		<item value="1|Tahoma|8.622754|0|WINDOWS|1|-20|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+		<item value="864" key="DIALOG_HEIGHT"/>
 		<item value="1029" key="DIALOG_X_ORIGIN"/>
 		<item value="275" key="DIALOG_Y_ORIGIN"/>
 	</section>
@@ -71,9 +71,9 @@
 		</section>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item value="603" key="DIALOG_WIDTH"/>
-		<item value="1|Tahoma|8.4|0|WINDOWS|1|-14|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
-		<item value="772" key="DIALOG_HEIGHT"/>
+		<item value="881" key="DIALOG_WIDTH"/>
+		<item value="1|Tahoma|8.622754|0|WINDOWS|1|-20|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+		<item value="1040" key="DIALOG_HEIGHT"/>
 		<item value="1486" key="DIALOG_X_ORIGIN"/>
 		<item value="357" key="DIALOG_Y_ORIGIN"/>
 	</section>

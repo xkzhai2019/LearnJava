@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="table"/>\r\n</watchExpressions>\r\n
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="table"/>\r\n<expression enabled\="true" text\="hash"/>\r\n<expression enabled\="true" text\="12 &amp; 0xF"/>\r\n<expression enabled\="true" text\="(10 &amp; 0xF)&lt;&lt; 4"/>\r\n<expression enabled\="true" text\="(11 &amp; 0xF)&lt;&lt;8"/>\r\n</watchExpressions>\r\n

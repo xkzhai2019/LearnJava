@@ -1,0 +1,41 @@
+package com.xkzhai.collection;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
+
+public class MapNestedDemo {
+
+	public static void main(String[] args) {
+		//1. 班级：名单(String)集合 ，每班10人
+		Map<String, String> names = null;
+				
+		//2. 年级：班级集合，每个年级10个班
+		Map<String,Map<String, String>> grade = null;
+				
+		//3. 学校：年级集合，6个年级
+		// 创建学校，是年级的集合
+		Map<String,Map<String,Map<String, String>>> school = new HashMap<String,Map<String,Map<String, String>>>();
+		
+		for(int i=1;i<=6;i++){
+			grade = new HashMap<String,Map<String, String>>();
+			for(int j=1;j<=10;j++){
+				names = new HashMap<String,String>();
+				for(int k=1;k<=20;k++){
+					names.put("No"+k,"tom-"+k);
+				}
+				grade.put(j+"",names);
+			}
+			school.put(i+"",grade);
+		}
+	}
+	
+	public static void outSchool(Map<String,Map<String,Map<String, String>>> school ){
+		Set<Entry<String,Map<String,Map<String, String>>>> entrys = school.entrySet();
+		for(Entry<String,Map<String,Map<String, String>>> entry: entrys){
+			
+		}
+	}
+
+}

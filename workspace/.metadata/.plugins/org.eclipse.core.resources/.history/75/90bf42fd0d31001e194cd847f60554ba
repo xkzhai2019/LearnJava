@@ -1,9 +1,0 @@
-package com.xkzhai.string;
-
-public class WrapperDemo {
-	// ctrl + shift + f 格式化代码
-	// alt + / 内容辅助
-	public static void main(String[] args) {
-		
-	}
-}

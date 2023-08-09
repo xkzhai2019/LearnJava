@@ -11,17 +11,20 @@ public class SetDemo2 {
 //		dogs.add(new Dog("white"));
 		Dog d1 = new Dog("white");
 		Dog d2 = new Dog("white");
-		
+		System.out.println(d1.hashCode());
+		System.out.println(d1.hashCode());
+	
 		dogs.add(d1);
-		dogs.add(d2);
+		dogs.add(d1);
 		System.out.println(dogs.size());
-		w
+		
 		System.out.println(dogs.contains(new Dog("black")));
 	}
 
 }
 
 class Dog{
+	private static int no = 0;
 	private String name;
 	
 	public Dog(String name) {
@@ -38,7 +41,7 @@ class Dog{
 	}
 	@Override
 	public int hashCode() {
-		return 1;
+		return no++;
 	}
 	
 	@Override
