@@ -1,0 +1,19 @@
+package com.xkzhai.io;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWriterDemo {
+
+	public static void main(String[] args) {
+		try {
+			FileWriter fw = new FileWriter("hello.txt");
+			fw.write("hello world");
+			fw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

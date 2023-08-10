@@ -1,0 +1,12 @@
+package com.xkzhai.io;
+
+import java.io.FileWriter;
+
+public class FileWriterDemo {
+
+	public static void main(String[] args) {
+		FileWriter fw = new FileWriter();
+
+	}
+
+}

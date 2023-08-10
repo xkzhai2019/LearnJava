@@ -1,0 +1,12 @@
+package com.xkzhai.collection;
+
+public class StudentDemo2 {
+
+}
+
+class Student2{
+	private byte age;
+	private byte height;
+	private byte weigth;
+	
+}
