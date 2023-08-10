@@ -70,6 +70,7 @@ public class MapNestedDemo {
 		}
 	}
 	
+	// µü´úÆ÷
 	public static void outSchool2(Map<String,Map<String,Map<String, String>>> school ){
 		Iterator<Entry<String,Map<String,Map<String, String>>>> it1 = school.entrySet().iterator();
 		while(it1.hasNext()){

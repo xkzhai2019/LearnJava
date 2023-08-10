@@ -20,7 +20,7 @@ public class StudentDemo {
 	}
 }
 
-class Student{
+class Student implements Comparable<Student>{
 	private int height;
 	private int weight;
 	private int age;
@@ -70,5 +70,15 @@ class Student{
 		}
 		return false;
 	}
-	
+	@Override
+	public int compareTo(Student o) {
+		if(o==null){
+			return 1;
+		}
+		return this.height - o.height;
+	} 
+	@Override
+	public String toString() {	
+		return "Student("+ height + ","+ weight+","+age+")";
+	}
 }
