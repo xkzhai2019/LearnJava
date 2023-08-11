@@ -1,6 +1,8 @@
 package com.xkzhai.collection;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -21,7 +23,7 @@ public class MapDemo {
 		map.put(100, "tom-300");
 		System.out.println(map.size());
 		
-		// 迭代
+		// 通过entrySet迭代
 		Set<Entry<Integer,String>> entrys = map.entrySet();
 		for(Entry<Integer,String> entry:entrys){
 			Integer key = entry.getKey();
@@ -29,16 +31,45 @@ public class MapDemo {
 			System.out.println(key+"-"+value);
 		}
 		
-	    System.out.println(map.get(100));
-	    
-	    map.remove(100);
 	    // 通过key迭代
+		System.out.println("===========");
+	    System.out.println(map.get(100));	    
+	    map.remove(100);
 	    Set<Integer> keys = map.keySet();
 	    for(Integer key: keys){
 	    	System.out.println(key+"-"+map.get(key));
 	    }
 	    
+	    // 	通过迭代器
+	    System.out.println("===========");
+	    Map<String,String> map2 = new HashMap<String,String>();
+	    map2.put("key001","tom1");
+	    map2.put("key002","tom2");
+	    map2.put("key003","tom3");
+	    map2.put("key004","tom3");
+	    Set<Entry<String,String>> set = map2.entrySet();
+	    Iterator<Entry<String,String>> it = set.iterator();
+	    while(it.hasNext()){
+	    	Entry<String,String> entry = it.next();
+	    	String key = entry.getKey();
+	    	String value = entry.getValue();
+	    	System.out.println(key+"-"+value);
+	    }
 	    
+	    System.out.println("===========");
+	    Set<String> keys2= map2.keySet();
+	    Iterator<String> it2 = keys2.iterator();
+	    while(it2.hasNext()){
+	    	String key = it2.next();
+	    	String value = map2.get(key);
+	    	System.out.println(key+"-"+value);
+	    }
 	    
+	    System.out.println("===========");
+	    Collection<String> values = map2.values();  
+	    Iterator<String> it3 = values.iterator();
+	    while(it3.hasNext()){
+	    	System.out.println(it3.next());
+	    }
 	}
 }

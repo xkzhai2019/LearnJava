@@ -13,6 +13,7 @@ public class FileReaderDemo {
 			char[] buffer = new char[3];
 			while(true){
 				int length = fr.read(buffer);
+				//fr.read(); // 一次只读1个字符
 				// 到了流的末尾
 				if(length==-1){
 					break;
@@ -56,6 +57,7 @@ public class FileReaderDemo {
 				}
 			}
 		}
+		
 	}
 
 }

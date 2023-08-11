@@ -1,5 +1,6 @@
 package com.xkzhai.collection;
 
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class TreeSetDemo {
@@ -16,6 +17,15 @@ public class TreeSetDemo {
 		for(String s: ts){
 			System.out.println(s);
 		}
+		
+		System.out.println("================");
+		//得到迭代器
+		Iterator<String> it = ts.iterator();
+		while(it.hasNext()){
+			String tmp = it.next();
+			System.out.println(tmp);
+		}
+		
 		// 字符比较大小
 		System.out.println('a'>'b');
 		//System.out.println("abc">"bc");

@@ -1,0 +1,23 @@
+package com.xkzhai.io;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWriterVSBufferedWriter {
+
+	public static void main(String[] args) {
+		try {
+			long l = System.nanoTime();
+			FileWriter fw = new FileWriter("hello.txt");
+			for(int i=0;i<10000000;i++){
+				fw.write(i+"");
+			}
+			fw.close();
+			System.out.println(System.nanoTime() - l);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
