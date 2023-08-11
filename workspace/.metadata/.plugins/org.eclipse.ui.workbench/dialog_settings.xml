@@ -5,8 +5,8 @@
 		<item value="644" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="811" key="dialogHeight"/>
-		<item value="1536" key="dialogWidth"/>
+		<item value="872" key="dialogHeight"/>
+		<item value="1655" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
