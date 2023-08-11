@@ -1,0 +1,17 @@
+package com.xkzhai.io;
+
+import java.io.FileInputStream;
+
+import org.junit.Test;
+
+public class ByteStreamDemo {
+
+	/**
+	 * 使用字节流复制图片
+	 */
+	@Test
+	public void copyImg(){
+		FileInputStream fils = new FileInputStream("1.jpg");
+	}
+
+}

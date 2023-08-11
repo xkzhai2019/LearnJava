@@ -1,0 +1,19 @@
+package com.xkzhai.io;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.junit.Test;
+
+public class ByteStreamDemo {
+
+	/**
+	 * 使用字节流复制图片
+	 * @throws Exception 
+	 */
+	@Test
+	public void copyImg() throws Exception{
+		FileInputStream fils = new FileInputStream("1.jpg");
+	}
+
+}
