@@ -1,0 +1,10 @@
+package com.xkzhai.archiver;
+
+public class Archiver {
+	/**
+	 * 创建归档文件
+	 */
+	public void newArachiverFile(String[] paths,String yarPath){
+		
+	}
+}

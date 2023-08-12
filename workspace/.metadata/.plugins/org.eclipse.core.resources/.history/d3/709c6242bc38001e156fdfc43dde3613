@@ -1,0 +1,12 @@
+package com.xkzhai.archiver;
+
+import java.io.FileOutputStream;
+
+public class Archiver {
+	/**
+	 * 创建归档文件
+	 */
+	public void newArachiverFile(String[] paths,String yarPath){
+		FileOutputStream fout = new FileOutputStream(yarPath);
+	}
+}

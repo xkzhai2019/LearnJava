@@ -1,0 +1,11 @@
+package com.xkzhai.archiver;
+
+public class App {
+
+	public static void main(String[] args) {
+		String path = "home/xkzhai/hello.txt";
+		System.out.println(path.substring(path.lastIndexOf(".")));
+
+	}
+
+}
