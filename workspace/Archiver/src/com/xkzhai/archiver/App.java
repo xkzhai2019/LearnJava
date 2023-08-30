@@ -15,9 +15,10 @@ public class App {
 		Archiver archiver = new Archiver();
 		String[] srcPaths = {
 				"1.jpg",
-				"hello.txt"
+				"hello.txt",
+				"myyar.yar"
 		};
-		String yarPath = "myyar.yar";
+		String yarPath = "newyar.yar";
 		archiver.newArachiverFile(srcPaths, yarPath);
 		System.out.println("over");
 	}
@@ -28,7 +29,17 @@ public class App {
 	@Test
 	public void addFile(){
 		Archiver archiver = new Archiver();
-		archiver.addFile("hello_copy.txt", "myyar.yar");
+		archiver.appendFile("hello_copy.txt", "myyar.yar");
+		System.out.println("over");
+	}
+	
+	/**
+	 * ½âµµyarÎÄ¼þ
+	 */
+	@Test
+	public void unarchiveFile(){
+		Archiver archiver = new Archiver();
+		archiver.unarchive("unarch/3.yar", "unarch/tmp");
 		System.out.println("over");
 	}
 
