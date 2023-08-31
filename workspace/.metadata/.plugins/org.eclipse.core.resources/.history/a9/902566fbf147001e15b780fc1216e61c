@@ -1,0 +1,20 @@
+package com.xkzhai.io;
+
+import java.io.File;
+
+public class CopyDir {
+	public static void main(String[] args) {
+		
+	}
+	
+	/**
+	 * 拷贝目录
+	 */
+	private void copyDir(String srcPath, String destPath){
+		// 源目录
+		File srcFile = new File(srcPath);
+		// 目标目录
+		File destFile = new File(destPath);
+		
+	}
+}

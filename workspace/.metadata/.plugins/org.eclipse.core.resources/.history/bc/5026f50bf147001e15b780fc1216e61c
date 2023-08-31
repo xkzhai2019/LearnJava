@@ -77,7 +77,7 @@ public class ByteStreamDemo {
 		// 文件长度
 		System.out.println(fin.available());
 		// 1....1 1111 1111
-		//&0....0 1111 1111 <----> 0xff
+		//&0....0 1111 1111   0xff
 		//---------------------
 		while( (c = fin.read())!=-1){
 			// 文件输入流: skip可以跳过文件尾，不可以跳出文件头

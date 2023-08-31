@@ -1,0 +1,14 @@
+package com.xkzhai.io;
+
+public class CopyDir {
+	public static void main(String[] args) {
+		
+	}
+	
+	/**
+	 * ¿½±´Ä¿Â¼
+	 */
+	private void copy(String srcPath, String destPath){
+		
+	}
+}
