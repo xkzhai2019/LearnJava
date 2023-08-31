@@ -1,0 +1,34 @@
+package com.xkzhai.archiver;
+
+import java.io.File;
+
+public class FileRecursiveDemo {
+	public static void main(String[] args) {
+		showFile("..//LearnJava");
+	}
+	
+	
+	/**
+	 * 显示（文件+文件夹）路径名
+	 */
+	private static void showFile(String path){
+		// 通过路径构造file对象
+		File f = new File(path);
+		if(f.exists()){
+			// 输出文件绝对路径
+			System.out.println(f.getAbsolutePath());
+			// 是否是目录
+			if(f.isDirectory()){
+				File[] children  = f.listFiles();
+				for(File ff: children){
+					String p0 = ff.getAbsolutePath();
+					showFile(p0);
+				}
+			}
+//			// 是否是文件
+//			if(f.isFile()){
+//				System.out.println(f.getAbsolutePath());
+//			}
+		}
+	}
+}

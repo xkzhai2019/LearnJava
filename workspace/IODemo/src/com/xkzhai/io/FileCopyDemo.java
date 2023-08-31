@@ -1,9 +1,12 @@
 package com.xkzhai.io;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+
+import org.junit.Test;
 
 public class FileCopyDemo {
 
@@ -47,6 +50,32 @@ public class FileCopyDemo {
 		}
 		
 
+	}
+	
+	@Test
+	public void FileTest(){
+		File f = new File("hello.txt");
+		// 文件长度
+		long len = f.length();
+		System.out.println(len);
+		//得到上级目录
+		String str = f.getParent();
+		System.out.println(str);
+		
+		System.out.println("canWrite():"+f.canWrite());
+		
+		File[] fs = new File("C:\\LearnJava\\workspace\\Archiver").listFiles();
+		System.out.println(fs.length);
+		
+		// 重命名文件
+		f.renameTo(new File("hello.txt","hello2.txt"));
+		System.out.println("over");
+		
+		// 列出文件系统的root
+		File[] fs2 = File.listRoots();
+		for(File f0: fs2){
+			System.out.println(f0.getAbsolutePath());
+		}
 	}
 
 }
