@@ -1,0 +1,18 @@
+package com.xkzhai.io;
+
+import java.io.FileNotFoundException;
+import java.io.RandomAccessFile;
+
+/**
+ * 随机访问文件
+ * @author Administrator
+ *
+ */
+public class RandomAccessFileDemo {
+	public static void main(String[] args) throws Exception {
+		RandomAccessFile raf = new RandomAccessFile("xx.txt","rw");
+		raf.writeChars("hello world");
+		raf.close();
+		System.out.println("over");
+	}
+}

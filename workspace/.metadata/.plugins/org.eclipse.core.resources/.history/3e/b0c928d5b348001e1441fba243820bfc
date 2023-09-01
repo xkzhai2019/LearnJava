@@ -1,0 +1,10 @@
+package com.xkzhai.io;
+
+/**
+ * 随机访问文件
+ * @author Administrator
+ *
+ */
+public class RandomAccessFileDemo {
+	
+}
