@@ -1,0 +1,19 @@
+1. 自定义线程类
+成员变量：n，用作seek定位
+          RandomAccessFile rar 用作读文件 
+	  RandomAccessFile raw，用作写文件
+
+成员函数：run()
+          rar.seek(n);
+	  raw.seek(n)
+	  rar.read()
+	  raf.write();
+
+2. main函数
+rar = 源文件
+raw = 目标文件
+MyThread0(n0,rar,raw).start();
+MyThread1(n1,rar,raw).start()
+MyThread2(n2,rar,raw).start()
+
+3. 疑问：是否存在线程安全问题？
