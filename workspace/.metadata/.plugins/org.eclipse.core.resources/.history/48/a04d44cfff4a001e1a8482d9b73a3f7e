@@ -1,0 +1,54 @@
+package com.xkzhai.io.deepcopy;
+
+public class DeepCpyDemo {
+
+}
+
+class Person{
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+}
+
+class Son{
+	private String name;
+	private Person person;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Person getPerson() {
+		return person;
+	}
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+	
+}
+
+class Dog{
+	private Son son;
+	private String name;
+	public Son getSon() {
+		return son;
+	}
+	public void setSon(Son son) {
+		this.son = son;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+}

@@ -1,0 +1,79 @@
+package com.xkzhai.io.deepcopy;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+/**
+ * 深度复制，复制的是整个对象图
+ * @author Administrator
+ *
+ */
+public class DeepCpyDemo {
+	
+	public void Serialize() throws Exception {
+		Person p = new Person();
+		Son s = new Son();
+		Dog d = new Dog();
+		
+		// 设置关联关系
+		s.setPerson(p);
+		d.setSon(s);
+		
+		// 串行化
+		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("copy.data"));
+		oos.writeObject(d);
+		oos.close();
+		
+	}
+}
+
+class Person{
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+}
+
+class Son{
+	private String name;
+	private Person person;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Person getPerson() {
+		return person;
+	}
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+	
+}
+
+class Dog{
+	private Son son;
+	private String name;
+	public Son getSon() {
+		return son;
+	}
+	public void setSon(Son son) {
+		this.son = son;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+}

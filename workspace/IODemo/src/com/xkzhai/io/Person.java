@@ -30,9 +30,10 @@ public class Person implements Serializable{
 	}
 	
 	public Person(){
-		
+		System.out.println("构造函数....");
 	}
 	public Person(String name, int age) {
+		System.out.println("构造函数....");
 		this.name = name;
 		this.age = age;
 	}

@@ -33,6 +33,7 @@ public class ObjectSerilizeDemo {
 	@Test
 	public void serializePerson() throws Exception {
 		Person p = new Person("tom",12);
+		System.out.println(p);
 		FileOutputStream fos = new FileOutputStream("p.data");
 		// 通过文件输出流构造对象输出流
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -57,6 +58,8 @@ public class ObjectSerilizeDemo {
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		// 反序列化
 		Person p = (Person)ois.readObject();
+		// 反序列化时，不经过构造函数，因为没有必要
+		System.out.println(p);
 		// 关闭流,装饰模式下，从外向里依次关闭		
 		ois.close();
 		fis.close();
