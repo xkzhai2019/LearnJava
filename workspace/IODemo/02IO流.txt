@@ -1,0 +1,27 @@
+流
+----------------
+	Reader
+	Writer
+	BufferedReader
+	BufferedWriter
+	LineNumberReader
+
+	InputStream
+	FileInputStream
+	BufferedInputStream
+	ByteArrayInputStream
+	ObjectInputStream
+	DataInputStream
+
+
+	OutputStream
+	....
+
+
+
+	InputStreamReader
+	OutputStreamWriter
+
+深度复制
+-----------------
+java.io.Serializable	

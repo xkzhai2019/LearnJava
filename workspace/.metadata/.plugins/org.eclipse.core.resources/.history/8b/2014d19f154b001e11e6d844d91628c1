@@ -72,6 +72,7 @@ public class DeepCpyDemo {
 		oos.close();
 		
 		byte[] bytes = baos.toByteArray();
+		
 		ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(bytes));
 		Person p2 = (Person)ois.readObject();
 		Son s2 = (Son)ois.readObject();
@@ -79,7 +80,9 @@ public class DeepCpyDemo {
 		
 		ois.close();
 		System.out.println(p2.getName());
+
 		System.out.println(s2.getName());
+
 		System.out.println(d2.getName());
 		
 	}

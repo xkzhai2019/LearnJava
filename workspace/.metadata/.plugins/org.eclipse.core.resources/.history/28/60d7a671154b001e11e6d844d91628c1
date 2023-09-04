@@ -53,7 +53,6 @@ public class DeepCpyDemo {
 	/**
 	 * 持续写入数据
 	 */
-	@Test
 	public void continusWrite() throws Exception{
 		Person p = new Person();
 		p.setName("jerry");
@@ -72,15 +71,13 @@ public class DeepCpyDemo {
 		oos.close();
 		
 		byte[] bytes = baos.toByteArray();
+		
 		ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(bytes));
 		Person p2 = (Person)ois.readObject();
 		Son s2 = (Son)ois.readObject();
 		Dog d2 = (Dog)ois.readObject();
 		
 		ois.close();
-		System.out.println(p2.getName());
-		System.out.println(s2.getName());
-		System.out.println(d2.getName());
 		
 	}
 	
@@ -114,9 +111,7 @@ public class DeepCpyDemo {
 	
 }
 
-class Person implements Serializable{
-
-	private static final long serialVersionUID = 5569554546558917044L;
+class Person{
 	private String name;
 
 	public String getName() {
