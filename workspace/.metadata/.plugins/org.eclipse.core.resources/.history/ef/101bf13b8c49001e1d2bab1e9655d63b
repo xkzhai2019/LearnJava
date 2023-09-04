@@ -1,0 +1,13 @@
+package com.xkzhai.io;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class IntegerDemo {
+	public static void main(String[] args) throws Exception {
+		Integer i = new Integer(100);
+		FileOutputStream fos = new FileOutputStream("integer.data");
+		
+		
+	}
+}

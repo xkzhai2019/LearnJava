@@ -1,4 +1,5 @@
-1. 自定义线程类
+1. 多线程文件拷贝求解思路：
+（1）. 自定义线程类
 成员变量：n，用作seek定位
           RandomAccessFile rar 用作读文件 
 	  RandomAccessFile raw，用作写文件
@@ -9,11 +10,28 @@
 	  rar.read()
 	  raf.write();
 
-2. main函数
+（2）. main函数
 rar = 源文件
 raw = 目标文件
 MyThread0(n0,rar,raw).start();
 MyThread1(n1,rar,raw).start()
 MyThread2(n2,rar,raw).start()
 
-3. 疑问：是否存在线程安全问题？
+（3）. 疑问：是否存在线程安全问题？
+
+2. 流的关闭
+
+FileInputStream fis;
+BufferedInputStream bis = new BufferedInputStream(fis);
+
+装饰模式下，从外向里依次关闭
+bis.close();
+fis.close();
+
+3. 串行化/序列化：将对象转换成某种格式（JVM定义）的字节数组，需要实现Serializable接口
+
+使用场景：
+1)将对象用于网络间传输或本地化成存储
+2)深度复制
+
+反串行：将字节数组恢复成java对象
