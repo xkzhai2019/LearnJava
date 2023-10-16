@@ -1,0 +1,15 @@
+package com.xkzhai.deepcopy;
+
+import javax.swing.JFrame;
+
+public class MyWindow {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("我的第一个窗口");
+		frame.setSize(800, 600);
+		frame.setLocation(100, 100);
+		frame.show();
+
+	}
+
+}
