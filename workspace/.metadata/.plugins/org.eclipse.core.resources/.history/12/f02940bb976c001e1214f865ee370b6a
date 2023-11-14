@@ -1,0 +1,7 @@
+package com.xkzhai.mulcopier;
+
+import javax.swing.JFrame;
+
+public class CopyUI extends JFrame{
+	
+}

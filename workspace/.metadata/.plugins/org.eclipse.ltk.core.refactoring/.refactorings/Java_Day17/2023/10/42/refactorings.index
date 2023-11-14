@@ -1,3 +1,11 @@
 1697459434751	Convert local variable 'btnOK' to field
 1697459446763	Convert local variable 'btnCancel' to field
 1697459453003	Convert local variable 'txtArea' to field
+1697509084044	Convert local variable 'miOpen' to field
+1697510318116	Convert local variable 'miExit' to field
+1697510919832	Rename compilation unit 'MainUI.java'
+1697511196266	Convert local variable 'lblSrcFile' to field
+1697511383287	Convert local variable 'tfSrcFile' to field
+1697532024980	Convert local variable 'btnStart' to field
+1697532204084	Convert local variable 'lblCount' to field
+1697532208264	Convert local variable 'tfCount' to field
