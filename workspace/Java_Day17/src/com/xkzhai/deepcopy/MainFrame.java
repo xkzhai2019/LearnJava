@@ -37,8 +37,6 @@ public class MainFrame extends JFrame implements ActionListener{
 	public MainFrame(){
 		initFrame();
 		this.setVisible(true);
-		
-		
 	}
 	
 	/**

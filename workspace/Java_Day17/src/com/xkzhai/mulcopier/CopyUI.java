@@ -4,10 +4,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 
 /**
@@ -28,6 +30,7 @@ public class CopyUI extends JFrame implements ActionListener{
 	private JButton btnStart;
 	private JLabel lblCount;
 	private JTextField tfCount;
+	public JProgressBar bar;
 	
 	public CopyUI(){
 		init();
@@ -43,7 +46,9 @@ public class CopyUI extends JFrame implements ActionListener{
 		this.add(lblSrcFile);
 		
 		tfSrcFile = new JTextField();
+		tfSrcFile.setText("D:/copyTest.zip");
 		tfSrcFile.setBounds(110, 10, 600, 30);
+		
 		this.add(tfSrcFile);
 		
 		// destDir标签
@@ -53,6 +58,7 @@ public class CopyUI extends JFrame implements ActionListener{
 		
 		tfDestDir = new JTextField();
 		tfDestDir.setBounds(110, 60, 600, 30);
+		tfDestDir.setText("D:/copyUI.zip");
 		this.add(tfDestDir);
 		
 		// 线程数
@@ -61,6 +67,7 @@ public class CopyUI extends JFrame implements ActionListener{
 		this.add(lblCount);
 		
 		tfCount = new JTextField();
+		tfCount.setText(""+5);
 		tfCount.setBounds(110, 110, 600, 30);
 		this.add(tfCount);
 		
@@ -69,6 +76,12 @@ public class CopyUI extends JFrame implements ActionListener{
 		btnStart.setBounds(10, 160, 100, 30);
 		this.add(btnStart);
 		btnStart.addActionListener(this);
+		
+		bar = new JProgressBar();
+		bar.setBounds(10, 200, 700, 50);
+//		bar.setMaximum(100);
+//		bar.setValue(50);
+		this.add(bar);
 		
 		this.setVisible(true);
 		
@@ -87,7 +100,16 @@ public class CopyUI extends JFrame implements ActionListener{
 		Object source = e.getSource();
 		// 开始按钮
 		if(source == btnStart){
+			String srcFile = tfSrcFile.getText();
+			String destDir = tfDestDir.getText();
+			int count = Integer.parseInt(tfCount.getText());
 			
+			// 创建复制器对象
+			Copier copier = new Copier(this,srcFile,destDir,count);
+			try {
+				copier.startCopy();
+			} catch (IOException e1) {
+			}
 		}
 	}
 }

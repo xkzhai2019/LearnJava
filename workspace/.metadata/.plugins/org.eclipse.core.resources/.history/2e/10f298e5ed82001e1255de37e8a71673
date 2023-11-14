@@ -1,0 +1,53 @@
+package com.xkzhai.mulcopier;
+
+import java.io.FileNotFoundException;
+import java.io.RandomAccessFile;
+
+/**
+ * 复制线程
+ * @author Administrator
+ *
+ */
+
+public class CopyThread extends Thread{
+	private String srcFile;
+	private String destDir;
+	
+	private int start;
+	private int end;
+
+	public CopyThread(String srcFile, String destDir, int start, int end) {
+		this.srcFile = srcFile;
+		this.destDir = destDir;
+		this.start = start;
+		this.end = end;
+	}
+
+	@Override
+	public void run() {
+		
+		RandomAccessFile src;
+		try {
+			// 定位源文件
+			src = new RandomAccessFile(srcFile, "r");
+			src.seek(start);
+			
+			// 定位目标文件
+			RandomAccessFile target = new RandomAccessFile(destDir, "rw");
+			target.seek(start);
+			
+			byte[] buffer = new byte[1024];
+			// 计算复制量
+			int amount = end - start + 1;
+			
+			while(){
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		
+	}
+}

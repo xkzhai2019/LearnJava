@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;com.xkzhai.mulcopier.CopyUI.init().bar&apos; in &apos;com.xkzhai.mulcopier.CopyUI.init()&apos; to field&#x0D;&#x0A;- Original project: &apos;Java_Day17&apos;&#x0D;&#x0A;- Original element: &apos;com.xkzhai.mulcopier.CopyUI.init().bar&apos;&#x0D;&#x0A;- Field name: &apos;bar&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;bar&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;com.xkzhai.mulcopier{CopyUI.java" name="bar" selection="1759 24" stamp="1699967842487" static="false" version="1.0" visibility="2"/>
+</session>

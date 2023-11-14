@@ -1,0 +1,12 @@
+package com.xkzhai.mulcopier;
+
+/**
+ * ¸´ÖÆÆ÷
+ * @author Administrator
+ *
+ */
+public class Copier {
+	public void startCopy(){
+		
+	}
+}

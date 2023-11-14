@@ -1,0 +1,100 @@
+package com.xkzhai.mulcopier;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JProgressBar;
+import javax.swing.JTextField;
+
+/**
+ * 主窗口
+ * @author Administrator
+ *
+ */
+public class CopyUI extends JFrame implements ActionListener{
+
+	private static final long serialVersionUID = 6189847546972653742L;
+	// srcFile
+	private JLabel lblSrcFile;
+	private JTextField tfSrcFile;
+
+	// destDir
+	private JLabel lblDestDir;
+	private JTextField tfDestDir;
+	private JButton btnStart;
+	private JLabel lblCount;
+	private JTextField tfCount;
+	
+	public CopyUI(){
+		init();
+	}
+	private void init() {
+		this.setTitle("主窗口");
+		this.setBounds(100, 100, 800, 600);
+		this.setLayout(null);
+		
+		// srcFile标签
+		lblSrcFile = new JLabel("源文件");
+		lblSrcFile.setBounds(10, 10, 80, 30);
+		this.add(lblSrcFile);
+		
+		tfSrcFile = new JTextField();
+		tfSrcFile.setBounds(110, 10, 600, 30);
+		this.add(tfSrcFile);
+		
+		// destDir标签
+		lblDestDir = new JLabel("目标目录");
+		lblDestDir.setBounds(10, 60, 100, 30);
+		this.add(lblDestDir);
+		
+		tfDestDir = new JTextField();
+		tfDestDir.setBounds(110, 60, 600, 30);
+		this.add(tfDestDir);
+		
+		// 线程数
+		lblCount = new JLabel("线程数");
+		lblCount.setBounds(10, 110, 80, 30);
+		this.add(lblCount);
+		
+		tfCount = new JTextField();
+		tfCount.setBounds(110, 110, 600, 30);
+		this.add(tfCount);
+		
+		// 开始按钮
+		btnStart = new JButton("开始");
+		btnStart.setBounds(10, 160, 100, 30);
+		this.add(btnStart);
+		btnStart.addActionListener(this);
+		
+		JProgressBar bar = new JProgressBar();
+		bar.setBounds(10, 200, 700, 50);
+//		bar.setMaximum(100);
+//		bar.setValue(50);
+		
+		this.add(bar);
+		this.setVisible(true);
+		
+		// 设置窗口适配器
+		this.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				System.exit(-1);
+			}
+		});
+	}
+	
+	// 添加按钮监听
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object source = e.getSource();
+		// 开始按钮
+		if(source == btnStart){
+			
+		}
+	}
+}
